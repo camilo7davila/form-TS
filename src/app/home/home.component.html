@@ -1,75 +1,77 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-7 prueba">
-           <button>div de prueba</button>  
+            <div class="title-left">
+                Plan Programate
+            </div>
+            <div class="title-left-bottom">
+                Ahora tú planeas cúando serás adjudicado para tu nuevo<br> vehículo Chevrolet
+            </div>
         </div>
         <div class="col-sm-5 card-principal">
-            <div class="card" style="margin-top: 50px;">
+            <div class="card" style="margin-top: 100px;">
                 <div class="card-body">
                     <div id="principal-title">
                         ¿QUE ESPERAS PARA CUMPLIR TU SUEÑO?
                     </div>
-                    <DIV id="second-title">
+                    <div id="second-title">
                         Deja tus datos y nos comunicamos contigo
-                    </DIV>
+                    </div>
                     <br>
                     <form action="">
                         <div class="form-row">
                             <div class="col-12">
                                 <input type="text" name="nameFlag" id="nameFlag" minlength="15" maxlength="50"
-                                    placeholder="Nombre completo" [(ngModel)]="nameInfo"  [className]="myClass ? 'classTrue':'classFlase'">
+                                    placeholder="Nombre completo" [(ngModel)]="nameInfo"
+                                    [className]="myClass ? 'classTrue':'classFlase'">
                             </div>
                         </div>
-
                         <br>
-
                         <div class="form-row">
                             <div class="col">
                                 <select id="inputState">
                                     <option disabled selected>Pais</option>
                                     <ng-container *ngFor="let country of countryList">
-                                    <option>{{country.name}}</option>
+                                        <option>{{country.name}}</option>
                                     </ng-container>
                                 </select>
                             </div>
                             <div class="col">
-                                <input type="number" name="documentFlag" required id="documentFlag" placeholder="Numero de documento"
-                                    max="9999" [(ngModel)]="documentInfo"  [className]="myClassDocument ? 'classTrue':'classFlase'">
+                                <input type="number" name="documentFlag" required id="documentFlag"
+                                    placeholder="Numero de documento" [(ngModel)]="documentInfo"
+                                    [className]="myClassDocument ? 'classTrue':'classFlase'">
                             </div>
                         </div>
-
                         <br>
-
                         <div class="form-row">
                             <div class="col">
-                                <select  id="producto" name="producto">
-                                    <option disabled selected value="1">Tipo de documento</option>
-                                    <option value="2">C.C</option>
-                                    <option value="3">T.I</option>
-                                    <option value="4">Pasaporte</option>
+                                <select id="producto" required name="producto">
+                                    <option disabled selected>Tipo de documento</option>
+                                    <option value="1">C.C</option>
+                                    <option value="2">T.I</option>
+                                    <option value="3">Pasaporte</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <input type="tel" name="title" required id="title" placeholder="Celular" maxlength="10"
-                                    minlength="10" [(ngModel)]="phoneInfo"  [className]="myClassPhone ? 'classTrue':'classFlase'">
+                                    minlength="10" [(ngModel)]="phoneInfo"
+                                    [className]="myClassPhone ? 'classTrue':'classFlase'">
                             </div>
                         </div>
-
                         <br>
-
                         <div class="form-row">
                             <div class="col-12">
                                 <input type="email" name="title" id="title" placeholder="Correo Electronico"
-                                    maxlength="40" minlength="11" [(ngModel)]="emailInfo"  [className]="myClassEmail ? 'classTrue':'classFlase'">
+                                    maxlength="40" minlength="11" [(ngModel)]="emailInfo"
+                                    [className]="myClassEmail ? 'classTrue':'classFlase'">
                             </div>
                         </div>
-
                         <br>
-
                         <div class="form-row">
                             <div class="col-12">
                                 <input type="checkbox" name="title" id="title" [(ngModel)]="itemInfo">
-                                <span>lei y acepto terminos<strong>holita</strong></span>
+                                <span>Leí y acepto terminos de la </span> <a style="font-size: 14px;" href="">politica
+                                    de privacidad</a>
                             </div>
                         </div>
                         <br>
